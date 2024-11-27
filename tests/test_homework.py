@@ -18,7 +18,7 @@ def test_01():
     if not os.path.exists("files/output/test.csv"):
         raise FileNotFoundError("File 'files/output/test.csv' not found")
 
-    test = pd.read_csv("files/test.csv", index_col=None)
+    test = pd.read_csv("files/output/test.csv", index_col=None)
 
     assert test.loc[0, "key"] == "acdeghinoqruy"
     assert test.loc[1, "key"] == "acdegilmnoty"
